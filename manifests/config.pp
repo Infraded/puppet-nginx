@@ -196,7 +196,7 @@ class nginx::config {
   }
 
   if $client_body_temp_path {
-    $client_body_temp_path_split = split($client_body_temp_path. ' ')
+    $client_body_temp_path_split = split($client_body_temp_path, ' ')
     file {$client_body_temp_path_split[0]:
       ensure => directory,
       owner  => $daemon_user,
